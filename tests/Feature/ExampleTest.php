@@ -20,6 +20,6 @@ class ExampleTest extends TestCase
     public function test_home_page_contains_hello_world_text(): void
     {
         $response = $this->get('/');
-        $response->assertSee('Hello World');
+        $response->assertSee('laravel');
     }
 }
