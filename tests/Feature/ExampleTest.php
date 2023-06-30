@@ -14,8 +14,12 @@ class ExampleTest extends TestCase
     {
         $response = $this->get('/');
 
-
-
         $response->assertStatus(200);
+    }
+
+    public function test_home_page_contains_hello_world_text(): void
+    {
+        $response = $this->get('/');
+        $response->assertSee('Hello World');
     }
 }
